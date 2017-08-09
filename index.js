@@ -11,8 +11,7 @@ module.exports = {
         return '';
       }
 
-      return  'var _sift = window._sift = window._sift || [];' +
-              '<script type="text/javascript" src="https://cdn.siftscience.com/s.js"></script>';
+      return  '<script type="text/javascript" src="https://cdn.siftscience.com/s.js"></script>';
     }
   }
 };
