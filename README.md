@@ -1,8 +1,6 @@
 # Ember Sift
 
-An integration of [siftscience.com](https://siftscience.com/developers/docs/javascript/javascript-api) and emberjs
-
-This README outlines the details of collaborating on this Ember addon.
+An integration of [siftscience.com](https://siftscience.com/developers/docs/javascript/javascript-api) and [Ember.js](https://emberjs.com/)
 
 ## Installation
 
