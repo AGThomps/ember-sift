@@ -1,26 +1,23 @@
-# ember-sift
+# Ember Sift
+
+An integration of [siftscience.com](https://siftscience.com/developers/docs/javascript/javascript-api) and emberjs
 
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-sift`
-* `yarn install`
+```sh
+ember install ember-sift
+```
 
-## Running
+## Configuration/Logging
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Add to your enviroment.js file `config.enviroment.js` your sift `JS_SNIPPET_KEY`. There is an option avaliable `LOG_TRACKING` to log sift events by default it is set to false.
 
-## Running Tests
+```sh
+  ENV.sift =  {
+    SNIPPET_KEY: '<JS_SNIPPET_KEY>',
+    LOG_TRACKING: true
+  };
+```
 
-* `yarn test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
