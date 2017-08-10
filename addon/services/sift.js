@@ -4,6 +4,8 @@ import config from 'ember-get-config';
 
 const { sift } = config;
 
+let _sift = window._sift = window._sift || [];
+
 export default Ember.Service.extend({
   init() {
     this._super();
@@ -24,8 +26,7 @@ export default Ember.Service.extend({
 
   trackSift(userId, sessionId) {
     let siftUserId = userId ? userId : this.siftUserId;
-    let _sift = window._sift = window._sift || [];
-    if(this.hasSift) {
+    if(this.hasSift()) {
       _sift.push(['_setAccount', this.siftConfigKey]);
       _sift.push(['_setUserId', siftUserId]);
       _sift.push(['_setSessionId', 'sessionId']);
