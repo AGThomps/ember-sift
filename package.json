@@ -1,12 +1,14 @@
 {
   "name": "ember-sift",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "An integration between siftscience and emberjs.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "siftscience",
+    "fraud detection"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Outdoorsy",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -39,7 +41,6 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.14.1",
-    "ember-welcome-page": "^3.0.0",
     "loader.js": "^4.2.3"
   },
   "engines": {
