@@ -7,16 +7,13 @@ export function initialize(appInstance) {
 
   if (sift) {
     router.on('didTransition', function() {
-      sift.trackSift();
-    });
-  }
-
-  if (sift) {
-    router.on('didTransition', function() {
       const applicationRoute = owner.lookup('route:application');
 
       if (applicationRoute && typeof applicationRoute.siftUser === 'function') {
         applicationRoute.siftUser();
+      }
+      if (sift.hasUser()) {
+        sift.trackSift();
       }
     });
   }

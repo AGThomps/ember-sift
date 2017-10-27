@@ -1,6 +1,7 @@
 /* globals FastBoot */
 import Ember from 'ember';
 import config from 'ember-get-config';
+import { isPresent } from 'ember-utils';
 
 const { sift } = config;
 
@@ -22,6 +23,10 @@ export default Ember.Service.extend({
 
   hasSift() {
     return !!(window._sift && typeof window._sift === "object");
+  },
+
+  hasUser() {
+    return isPresent(this.siftUserId);
   },
 
   trackSift(userId, sessionId) {
