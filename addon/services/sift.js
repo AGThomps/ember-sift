@@ -31,18 +31,20 @@ export default Ember.Service.extend({
 
   trackSift(userId, sessionId) {
     let siftUserId = userId ? userId : this.siftUserId;
+    let siftSessionId = sessionId ? sessionId : this.siftSessionId;
     if(this.hasSift()) {
       _sift.push(['_setAccount', this.siftConfigKey]);
       _sift.push(['_setUserId', siftUserId]);
-      _sift.push(['_setSessionId', 'sessionId']);
+      _sift.push(['_setSessionId', siftSessionId]);
       _sift.push(['_trackPageview']);
     }
 
     this.log('trackSift', [this.siftConfigKey, siftUserId, sessionId]);
   },
 
-  siftUser(userId) {
+  siftUser(userId, sessionId) {
     this.siftUserId = userId;
+    this.siftSessionId = sessionId;
 
     this.log('siftUser', arguments);
   },
